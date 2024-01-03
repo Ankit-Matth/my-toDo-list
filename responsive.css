@@ -1,0 +1,122 @@
+@media screen and (max-width:458px) {
+    html {
+        font-size: 80%;
+    }
+
+    * {
+        overflow: hidden;
+    }
+
+    .filter {
+        justify-content: space-evenly;
+    }
+
+    #all,
+    #pending,
+    #completed,
+    #deleted,
+    #clearAll {
+        height: 23px;
+        padding: 1px;
+        margin: 10px auto;
+    }
+
+    #pending {
+        width: 5rem;
+    }
+
+    #completed {
+        width: 6rem;
+    }
+
+    #clearAll {
+        width: 4rem;
+        font-size: 0.87rem;
+    }
+
+    #deleted {
+        width: 5rem;
+    }
+
+    #inputTask {
+        height: 30px;
+        margin: 15px 3px;
+        padding-left: 10px;
+    }
+
+    #addBtn {
+        height: 30px;
+        margin: 15px 3px;
+    }
+
+    #date {
+        height: 30px;
+        margin: 15px 0px;
+        padding-left: 4px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    html {
+        font-size: 58%;
+    }
+
+    * {
+        overflow: hidden;
+    }
+
+    #inputTask {
+        height: 23px;
+        margin: 12px 3px;
+        padding-left: 10px;
+        font-size: 8px;
+    }
+
+    #addBtn {
+        height: 23px;
+        font-size: 6px !important;
+        margin: 12px 3px;
+        font-weight: normal;
+    }
+
+    #date {
+        height: 23px;
+        margin: 12px 0px;
+        font-size: 5.5px;
+        padding-left: 4px;
+    }
+
+    #all,
+    #pending,
+    #completed,
+    #deleted,
+    #clearAll {
+        height: 21px;
+        padding: 1px;
+        margin: 10px auto;
+        font-size: 7px;
+    }
+
+    #list-container li {
+        margin-bottom: 4px;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:275px) {
+    html {
+        font-size: 47%;
+    }
+
+    * {
+        overflow: hidden;
+    }
+
+    #clearAll {
+        width: 4rem;
+        font-size: 0.7rem;
+    }
+}

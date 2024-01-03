@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 0.8rem;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#inputTask {
+    height: 35px;
+    width: 15.625rem;
+    margin: 15px 3px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding-left: 12px;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px black;
+}
+
+#addBtn {
+    height: 35px;
+    width: 5.31rem;
+    font-size: 0.8rem;
+    margin: 15px 3px;
+    margin-left: 5px;
+    font-weight: bolder;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(46, 46, 228);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px black;
+}
+
+#addBtn:hover {
+    background-color: gold;
+    color: black;
+}
+
+#date {
+    height: 35px;
+    width: 6.25rem;
+    margin: 15px 0px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    padding: 3px;
+    padding-left: 6px;
+    box-shadow: 2px 2px 4px black;
+}
+
+#date:hover {
+    cursor: pointer;
+}
+
+.filter {
+    background-color: black;
+    width: 28.125rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 5px 5px 4px rgb(49, 47, 47);
+    margin-bottom: 8px;
+}
+
+#all,
+#pending,
+#completed,
+#deleted,
+#clearAll {
+    height: 30px;
+    padding: 2px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    margin: 12px 12px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#all {
+    width: 3.125rem;
+    background-color: rgb(255, 0, 234);
+    color: white;
+}
+
+#all:hover {
+    background-color: rgba(255, 0, 234, 0.719);
+}
+
+#pending {
+    background-color: blue;
+    width: 4rem;
+    color: white;
+}
+
+#pending:hover {
+    background-color: rgba(0, 0, 255, 0.548);
+}
+
+#completed {
+    background-color: rgb(8, 255, 8);
+    width: 5.25rem;
+}
+
+#completed:hover {
+    background-color: rgba(8, 255, 8, 0.575);
+}
+
+#deleted {
+    background-color: red;
+    color: white;
+    width: 3.75rem;
+}
+
+#deleted:hover {
+    background-color: rgba(255, 0, 0, 0.664);
+}
+
+#clearAll {
+    background-color: aqua;
+    color: rgb(0, 0, 0);
+    width: 4.2rem;
+}
+
+#clearAll:hover {
+    background-color: rgba(0, 255, 255, 0.671);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#list-container li {
+    background-color: black;
+    background-color: yellow;
+    width: 28.125rem;
+    border-radius: 4px;
+    box-shadow: 4px 4px 3px rgb(36, 35, 35);
+    height: 3rem;
+    line-height: 3rem;
+    margin: 5px auto;
+    padding: 0px 6px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.125rem;
+}
+
+.left {
+    width: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    width: 4rem;
+}
+
+.fa-pen-to-square {
+    font-size: 1.15rem;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.fa-delete-left {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.checkBtn {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: blue;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+p {
+    height: 2.6rem;
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2.2;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+p::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+p::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+}
+
+p::-webkit-scrollbar-thumb {
+    background-color: #999;
+}
+
+p {
+    scrollbar-width: thin;
+    scrollbar-color: #999 #f2f2f2;
+}
+
+
+span {
+    height: 2.6rem;
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 2.2;
+    margin: 0;
+    padding-left: 0.8rem;
+}
+
+.checked {
+    text-decoration: line-through;
+    text-shadow: 1px 1px 4px rgb(122, 115, 115);
+}
