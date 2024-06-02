@@ -1,4 +1,4 @@
-let isAllActive = false
+let isAllActive = false // Flag to indicate if all tasks are being displayed
 
 function allTasks() {
     isAllActive = true
@@ -41,6 +41,7 @@ function pendingTasks() {
         li.innerHTML = `<span>You do not have any pending tasks.</span>`
         listContainer.appendChild(li)
     }
+    // Disable input for adding new tasks & date
     inputTask.setAttribute('readOnly', 'readOnly')
     dateInput.setAttribute('readOnly', 'readOnly')
 }
@@ -50,6 +51,7 @@ function completedTasks() {
     if (!isAllActive) {
         listContainer.innerHTML = ""
     }
+    // Display each completed task
     if (!(CompletedArr === null) && compArr.length > 0) {
         for (let i = 0; i < CompletedArr.length; i++) {
             let li = document.createElement('li')
@@ -73,12 +75,14 @@ function completedTasks() {
         li.innerHTML = `<span>You do not have any completed tasks.</span>`
         listContainer.appendChild(li)
     }
+     // Disable editing for completed tasks 
     let left = document.getElementsByClassName('left')
     Array.from(left).forEach(element => {
         if (!isAllActive) {
             element.firstElementChild.setAttribute("disabled", "disabled")
         }
     });
+    // Disable input for adding new tasks & date
     inputTask.setAttribute('readOnly', 'readOnly')
     dateInput.setAttribute('readOnly', 'readOnly')
 }
@@ -86,6 +90,7 @@ function completedTasks() {
 function deletedTasks() {
     let deletedArr = JSON.parse(localStorage.getItem('Deleted'))
     listContainer.innerHTML = ""
+    // Display each deleted task
     if (!(deletedArr === null)) {
         for (let i = 0; i < deletedArr.length; i++) {
             let li = document.createElement('li')
@@ -101,15 +106,17 @@ function deletedTasks() {
         li.innerHTML = `<span>You do not have any deleted tasks.</span>`
         listContainer.appendChild(li)
     }
+    // Disable editing for deleted tasks
     let left = document.getElementsByClassName('left')
     Array.from(left).forEach(element => {
         element.firstElementChild.setAttribute("disabled", "disabled")
     });
+    // Disable input for adding new tasks & date
     inputTask.setAttribute('readOnly', 'readOnly')
     dateInput.setAttribute('readOnly', 'readOnly')
 }
 
 function clearAll() {
-    localStorage.clear()
-    location.reload()
+    localStorage.clear() // Clear all tasks from localStorage
+    location.reload() // Reload the page to reflect changes
 }

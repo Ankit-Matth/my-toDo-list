@@ -6,6 +6,7 @@ const listContainer = document.getElementById('list-container');
 let edit = false;
 let editField;
 
+// Format date to DD-MM-YYYY
 function formatDate(inputDate) {
     let dateObject = new Date(inputDate);
     let day = dateObject.getDate().toString().padStart(2, '0');
@@ -14,6 +15,7 @@ function formatDate(inputDate) {
     return `${day}-${month}-${year}`;
 }
 
+// Set the date with the task description
 function setDateWithTask() {
     let date = new Date();
     let year = date.getFullYear();
@@ -33,6 +35,7 @@ function setDateWithTask() {
     }
 }
 
+// Check if the task already exists
 function isAlreadyPresent(searchTask) {
     const isPresent =
         pendArr.some(element => element.includes(searchTask)) || compArr.some(element => element.includes(searchTask));
@@ -83,6 +86,7 @@ function addTask() {
     dateInput.value = ""
 }
 
+// Event listener for task actions (complete, delete, edit)
 listContainer.addEventListener('click', (e) => {
     if (e.target.tagName === "INPUT") {
         e.target.nextElementSibling.classList.toggle("checked")
@@ -130,6 +134,7 @@ let delArr = JSON.parse(localStorage.getItem('Deleted')) || [];
 let compArr = JSON.parse(localStorage.getItem('Completed')) || [];
 let pendArr = JSON.parse(localStorage.getItem('Pending')) || [];
 
+// Update pending tasks in localStorage
 function updatePending(val) {
     val = val.replace(/\s*checked="checked"/, '').replace(/\s*class="checked"/, '');
     val = val.replace(/\s*visibility: hidden;/, '').replace('rgb(0, 0, 0)', '#000000');
@@ -145,6 +150,7 @@ function updatePending(val) {
     }
 }
 
+// Update completed tasks in localStorage
 function updateComplete(c) {
     for (let i = 0; i < compArr.length; i++) {
         compArr[i] = compArr[i].replace(/\s*checked="checked"/, '').replace('checked', '');
@@ -156,6 +162,7 @@ function updateComplete(c) {
     }
 }
 
+// Update completed tasks after deletion in localStorage
 function updateCompAfterDel(val) {
     compArr = compArr.filter(element => !delArr.includes(element));
     val = val.replace(/\s*checked="checked"/, '').replace('checked', '');
@@ -167,18 +174,21 @@ function updateCompAfterDel(val) {
     }
 }
 
+// Save deleted tasks to localStorage
 function saveDeletedData(d) {
     delArr.push(d)
     let string = JSON.stringify(delArr)
     localStorage.setItem("Deleted", string)
 }
 
+// Save completed tasks to localStorage
 function saveCompletedData(c) {
     compArr.push(c)
     let string = JSON.stringify(compArr)
     localStorage.setItem("Completed", string)
 }
 
+// Save pending tasks to localStorage
 function savePendingData(p) {
     pendArr.push(p)
     let string = JSON.stringify(pendArr)

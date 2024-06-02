@@ -3,10 +3,6 @@
         font-size: 80%;
     }
 
-    * {
-        overflow: hidden;
-    }
-
     .filter {
         justify-content: space-evenly;
     }
@@ -58,11 +54,7 @@
 
 @media screen and (max-width:380px) {
     html {
-        font-size: 58%;
-    }
-
-    * {
-        overflow: hidden;
+        font-size: 71%;
     }
 
     #inputTask {
@@ -94,7 +86,7 @@
         height: 21px;
         padding: 1px;
         margin: 10px auto;
-        font-size: 7px;
+        font-size: 9px;
     }
 
     #list-container li {
@@ -103,6 +95,20 @@
 
     h1 {
         margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    html {
+        font-size: 65%;
+    }
+
+    #all,
+    #pending,
+    #completed,
+    #deleted,
+    #clearAll {
+        font-size: 8px;
     }
 }
 
